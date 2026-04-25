@@ -314,15 +314,6 @@
       border-color: rgba(255,255,255,0.7);
       transform: translateY(-3px);
     }
-    .btn-blue {
-      background: linear-gradient(135deg, var(--blue-light), var(--blue));
-      color: var(--white);
-      box-shadow: 0 8px 24px rgba(37,87,167,0.35);
-    }
-    .btn-blue:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 36px rgba(37,87,167,0.48);
-    }
 
     /* =========================================
        NAVBAR
@@ -407,9 +398,6 @@
       transition: var(--transition);
     }
     .lang-toggle:hover { background: rgba(255,255,255,0.2); }
-    .nav-cta {
-      display: none;
-    }
     .hamburger {
       display: none;
       flex-direction: column;
@@ -857,6 +845,62 @@
     .portfolio-link:hover { gap: 8px; }
 
     /* =========================================
+       REAL WORKS SLIDER (أعمالنا على الطبيعة)
+    ========================================= */
+    #real-works {
+      padding: 80px 0;
+      background: var(--off-white);
+      overflow: hidden;
+    }
+    .rw-slider-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      direction: ltr; /* Force LTR for seamless infinite scrolling math */
+      padding: 20px 0;
+    }
+    .rw-slider-track {
+      display: inline-flex;
+      gap: 20px;
+      /* Animation speed controls how fast it scrolls (adjust 40s to your preference) */
+      animation: scrollMarquee 40s linear infinite;
+    }
+    .rw-slider-track:hover {
+      animation-play-state: paused;
+    }
+    .rw-item {
+      width: 320px;
+      height: 240px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      cursor: pointer;
+    }
+    .rw-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .rw-item:hover img {
+      transform: scale(1.08);
+    }
+    .rw-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    @keyframes scrollMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* Scrolls exactly half the track width (the duplicated content) */
+    }
+
+    /* =========================================
        TESTIMONIALS
     ========================================= */
     #testimonials {
@@ -1010,7 +1054,6 @@
       transition: transform 0.5s ease;
     }
     .blog-card:hover .blog-thumb img { transform: scale(1.07); }
-    .blog-thumb .thumb-emoji { position: relative; z-index: 2; }
     .bt-1 { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
     .bt-2 { background: linear-gradient(135deg, #fef3c7, #fde68a); }
     .bt-3 { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
@@ -1046,7 +1089,6 @@
       transition: gap 0.3s;
     }
     .blog-read:hover { gap: 8px; }
-    /* Dots */
     .blog-dots {
       display: flex;
       justify-content: center;
@@ -1131,8 +1173,7 @@
     .contact-form-wrap h3 { color: var(--white); font-size: 1.2rem; font-weight: 800; margin-bottom: 24px; }
     .form-group { margin-bottom: 16px; }
     .form-group input,
-    .form-group textarea,
-    .form-group select {
+    .form-group textarea {
       width: 100%;
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
@@ -1215,8 +1256,6 @@
     .sb-fb { background: #1877f2; color: var(--white); }
     .sb-wa { background: #25d366; color: var(--white); }
     .social-btn:hover { transform: translateY(-3px) scale(1.1); }
-    
-    /* نص الـ SEO والذكاء الاصطناعي في الفوتر (مهم جداً لمحركات البحث) */
     .footer-seo-text {
         color: rgba(255,255,255,0.4);
         font-size: 0.8rem;
@@ -1227,12 +1266,10 @@
         border-top: 1px solid rgba(255,255,255,0.05);
         padding-top: 20px;
     }
-    .footer-seo-text strong {
-        color: var(--orange);
-    }
+    .footer-seo-text strong { color: var(--orange); }
 
     /* =========================================
-       STICKY MOBILE BAR
+       STICKY MOBILE BAR & SCROLL TOP
     ========================================= */
     .sticky-bar {
       display: none;
@@ -1246,68 +1283,39 @@
       gap: 12px;
     }
     .sticky-bar a {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--white);
-      transition: var(--transition);
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 13px; border-radius: 12px; font-size: 0.9rem;
+      font-weight: 700; color: var(--white); transition: var(--transition);
     }
     .sticky-wa { background: linear-gradient(135deg, #25d366, #128c7e); }
     .sticky-call { background: linear-gradient(135deg, var(--blue-light), var(--blue)); }
     .sticky-bar a:active { transform: scale(0.95); }
 
-    /* =========================================
-       SCROLL TO TOP
-    ========================================= */
     #scrollTop {
-      position: fixed;
-      bottom: 90px;
-      left: 20px;
-      width: 44px; height: 44px;
-      border-radius: 12px;
+      position: fixed; bottom: 90px; left: 20px;
+      width: 44px; height: 44px; border-radius: 12px;
       background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-      color: var(--white);
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
+      color: var(--white); border: none; font-size: 1.1rem;
+      cursor: pointer; display: none; align-items: center; justify-content: center;
       box-shadow: 0 6px 20px rgba(249,115,22,0.4);
-      transition: var(--transition);
-      z-index: 800;
+      transition: var(--transition); z-index: 800;
     }
     #scrollTop:hover { transform: translateY(-3px); }
     #scrollTop.visible { display: flex; }
 
     /* =========================================
-       RESPONSIVE
+       RESPONSIVE & INNER PAGE OVERLAY (ختصار المساحة)
     ========================================= */
     @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
+      .nav-links, .nav-cta, .hero-visual { display: none; }
       .hamburger { display: flex; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .hero-visual { display: none; }
-      .hero-btns { justify-content: center; }
-      .hero-stats { justify-content: center; }
+      .hero-btns, .hero-stats { justify-content: center; }
       .hero-desc { margin: 0 auto 36px; }
-      .about-grid { grid-template-columns: 1fr; gap: 50px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .blog-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .about-grid, .services-grid, .portfolio-grid, .testimonials-grid, .blog-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .footer-inner { flex-direction: column; text-align: center; align-items: center; }
       .sticky-bar { display: flex; }
       body { padding-bottom: 70px; }
@@ -1316,326 +1324,61 @@
     @media (max-width: 480px) {
       .hero-stats { flex-wrap: wrap; gap: 20px; }
       .stat-divider { display: none; }
-      .about-features { grid-template-columns: 1fr; }
-      .blog-grid { grid-template-columns: 1fr; }
+      .about-features, .blog-grid { grid-template-columns: 1fr; }
     }
-
-    /* =========================================
-       INTERSECTION OBSERVER ANIMATIONS
-    ========================================= */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* =========================================
-       ENGLISH MODE
-    ========================================= */
+    
     body.ltr #hero .hero-badge::before { animation: pulse-ring 1.5s infinite; }
     body.ltr .contact-card:hover { transform: translateX(6px); }
 
-  </style>
-
-  <style>
-    /* Overlay backdrop */
-    .page-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      background: var(--off-white);
-      overflow-y: auto;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    .page-overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    /* Back bar */
-    .page-back-bar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(13,27,46,0.97);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(249,115,22,0.15);
-      padding: 14px 0;
-    }
-    .page-back-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .page-back-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.92rem;
-      cursor: pointer;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 8px 20px;
-      border-radius: 50px;
-      transition: var(--transition);
-      font-family: inherit;
-    }
-    .page-back-btn:hover {
-      background: rgba(249,115,22,0.2);
-      border-color: rgba(249,115,22,0.4);
-      transform: translateX(4px);
-    }
-    .page-back-logo {
-      display: flex; align-items: center; gap: 10px;
-      color: var(--white);
-      font-weight: 800; font-size: 0.95rem;
-    }
-    .page-back-logo span { color: var(--yellow-light); font-size: 1.3rem; }
-
-    /* Inner page hero */
-    .inner-hero {
-      background: linear-gradient(145deg, var(--dark) 0%, var(--dark-2) 50%, #1e3a5f 100%);
-      padding: 80px 0 60px;
-      position: relative;
-      overflow: hidden;
-    }
-    .inner-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 80%, rgba(249,115,22,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(37,87,167,0.15) 0%, transparent 50%);
-    }
-    .inner-hero-content {
-      position: relative; z-index: 2;
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-    }
-    .inner-hero-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(249,115,22,0.15);
-      border: 1px solid rgba(249,115,22,0.3);
-      color: var(--orange);
-      font-size: 0.78rem; font-weight: 700;
-      padding: 6px 16px; border-radius: 50px;
-      margin-bottom: 18px;
-    }
-    .inner-hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
+    /* Page Overlay CSS */
+    .page-overlay { position: fixed; inset: 0; z-index: 2000; background: var(--off-white); overflow-y: auto; opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+    .page-overlay.active { opacity: 1; pointer-events: all; }
+    .page-back-bar { position: sticky; top: 0; z-index: 10; background: rgba(13,27,46,0.97); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(249,115,22,0.15); padding: 14px 0; }
+    .page-back-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .page-back-btn { display: flex; align-items: center; gap: 10px; color: var(--white); font-weight: 700; font-size: 0.92rem; cursor: pointer; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 50px; transition: var(--transition); }
+    .page-back-btn:hover { background: rgba(249,115,22,0.2); border-color: rgba(249,115,22,0.4); transform: translateX(4px); }
+    .page-back-logo { display: flex; align-items: center; gap: 10px; color: var(--white); font-weight: 800; font-size: 0.95rem; }
+    .inner-hero { background: linear-gradient(145deg, var(--dark) 0%, var(--dark-2) 50%, #1e3a5f 100%); padding: 80px 0 60px; position: relative; overflow: hidden; }
+    .inner-hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .inner-hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3); color: var(--orange); font-size: 0.78rem; font-weight: 700; padding: 6px 16px; border-radius: 50px; margin-bottom: 18px; }
+    .inner-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--white); line-height: 1.2; margin-bottom: 16px; }
     .inner-hero h1 .hl { color: var(--orange); }
-    .inner-hero p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.7);
-      max-width: 620px;
-      line-height: 1.7;
-    }
-    .inner-hero-icon {
-      position: absolute;
-      left: 24px; top: 50%;
-      transform: translateY(-50%);
-      font-size: 8rem;
-      opacity: 0.07;
-    }
-
-    /* Content area */
-    .inner-content {
-      max-width: 1200px; margin: 0 auto; padding: 64px 24px;
-    }
-
-    /* Section blocks */
-    .ic-section {
-      margin-bottom: 56px;
-    }
-    .ic-section-title {
-      font-size: 1.45rem; font-weight: 900;
-      color: var(--dark);
-      margin-bottom: 8px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .ic-section-title .ics-icon {
-      width: 36px; height: 36px;
-      background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(251,191,36,0.1));
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-    }
-    .ic-divider {
-      width: 48px; height: 3px;
-      background: linear-gradient(90deg, var(--orange), var(--yellow));
-      border-radius: 2px; margin-bottom: 20px;
-    }
-    .ic-text {
-      font-size: 0.97rem; color: var(--text-body); line-height: 1.85;
-    }
-
-    /* Feature grid */
-    .ic-feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-    .ic-feature-card {
-      background: var(--white);
-      border: 1px solid rgba(0,0,0,0.07);
-      border-radius: var(--radius);
-      padding: 24px 20px;
-      box-shadow: var(--shadow-card);
-      transition: var(--transition);
-    }
-    .ic-feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(249,115,22,0.2);
-    }
-    .ic-feature-icon {
-      font-size: 1.8rem; margin-bottom: 12px;
-    }
-    .ic-feature-card h4 {
-      font-size: 0.97rem; font-weight: 800;
-      margin-bottom: 6px; color: var(--dark);
-    }
-    .ic-feature-card p {
-      font-size: 0.83rem; color: var(--text-body); line-height: 1.6;
-    }
-
-    /* Steps */
-    .ic-steps { margin-top: 20px; }
-    .ic-step {
-      display: flex; gap: 20px;
-      margin-bottom: 28px; align-items: flex-start;
-    }
-    .ic-step-num {
-      width: 42px; height: 42px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--white); font-weight: 900; font-size: 1rem;
-      box-shadow: 0 4px 14px rgba(249,115,22,0.35);
-    }
+    .inner-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 620px; line-height: 1.7; }
+    .inner-content { max-width: 1200px; margin: 0 auto; padding: 64px 24px; }
+    .ic-section { margin-bottom: 56px; }
+    .ic-section-title { font-size: 1.45rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .ic-section-title .ics-icon { width: 36px; height: 36px; background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(251,191,36,0.1)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .ic-divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--orange), var(--yellow)); border-radius: 2px; margin-bottom: 20px; }
+    .ic-text { font-size: 0.97rem; color: var(--text-body); line-height: 1.85; }
+    .ic-feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+    .ic-feature-card { background: var(--white); border: 1px solid rgba(0,0,0,0.07); border-radius: var(--radius); padding: 24px 20px; box-shadow: var(--shadow-card); transition: var(--transition); }
+    .ic-feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(249,115,22,0.2); }
+    .ic-feature-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .ic-feature-card h4 { font-size: 0.97rem; font-weight: 800; margin-bottom: 6px; color: var(--dark); }
+    .ic-feature-card p { font-size: 0.83rem; color: var(--text-body); line-height: 1.6; }
+    .ic-step { display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start; }
+    .ic-step-num { width: 42px; height: 42px; flex-shrink: 0; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 900; font-size: 1rem; box-shadow: 0 4px 14px rgba(249,115,22,0.35); }
     .ic-step-body h4 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
     .ic-step-body p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
-
-    /* Stats row */
-    .ic-stats {
-      display: flex; gap: 24px; flex-wrap: wrap;
-      padding: 28px;
-      background: linear-gradient(135deg, var(--dark), var(--dark-2));
-      border-radius: var(--radius);
-      margin: 32px 0;
-    }
+    .ic-stats { display: flex; gap: 24px; flex-wrap: wrap; padding: 28px; background: linear-gradient(135deg, var(--dark), var(--dark-2)); border-radius: var(--radius); margin: 32px 0; }
     .ic-stat { flex: 1; min-width: 120px; text-align: center; }
-    .ic-stat-num {
-      font-size: 2.2rem; font-weight: 900;
-      color: var(--orange);
-      line-height: 1;
-      background: linear-gradient(90deg, var(--orange), var(--yellow));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    .ic-stat-num { font-size: 2.2rem; font-weight: 900; color: var(--orange); line-height: 1; background: linear-gradient(90deg, var(--orange), var(--yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .ic-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
-
-    /* CTA bottom */
-    .ic-cta {
-      background: linear-gradient(135deg, var(--dark), #1e3a5f);
-      border-radius: var(--radius);
-      padding: 40px 36px;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .ic-cta::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(249,115,22,0.15) 0%, transparent 60%);
-    }
-    .ic-cta h3 {
-      color: var(--white); font-size: 1.6rem; font-weight: 900;
-      margin-bottom: 10px; position: relative;
-    }
-    .ic-cta p {
-      color: rgba(255,255,255,0.65); font-size: 0.95rem;
-      margin-bottom: 24px; position: relative;
-    }
-    .ic-cta-btns {
-      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
-      position: relative;
-    }
-
-    /* Blog article */
-    .ic-article-img {
-      height: 260px; border-radius: var(--radius);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem; margin-bottom: 32px;
-      position: relative; overflow: hidden;
-    }
-    .ic-article-meta {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 20px; flex-wrap: wrap;
-    }
-    .ic-article-cat {
-      font-size: 0.75rem; font-weight: 700;
-      color: var(--orange); text-transform: uppercase;
-      background: rgba(249,115,22,0.1);
-      padding: 4px 12px; border-radius: 20px;
-    }
-    .ic-article-date { font-size: 0.78rem; color: var(--text-muted); }
-
-    /* Portfolio gallery */
-    .ic-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px; margin: 24px 0;
-    }
-    .ic-gallery-item {
-      height: 200px; border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
-      position: relative; overflow: hidden;
-    }
-
-    @media (max-width: 768px) {
-      .inner-hero { padding: 60px 0 40px; }
-      .inner-hero h1 { font-size: 1.8rem; }
-      .ic-stats { gap: 16px; }
-      .ic-stat-num { font-size: 1.6rem; }
-    }
+    .ic-cta { background: linear-gradient(135deg, var(--dark), #1e3a5f); border-radius: var(--radius); padding: 40px 36px; text-align: center; position: relative; overflow: hidden; }
+    .ic-cta h3 { color: var(--white); font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
+    .ic-cta p { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin-bottom: 24px; }
+    .ic-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .ic-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+    .ic-gallery-item { height: 200px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; }
   </style>
 </head>
 <body>
@@ -1656,6 +1399,7 @@
         <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
         <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
         <li><a href="#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a></li>
+        <li><a href="#real-works" data-ar="على الطبيعة" data-en="On Site">على الطبيعة</a></li>
         <li><a href="#blog" data-ar="المدونة" data-en="Blog">المدونة</a></li>
         <li><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
       </ul>
@@ -1676,6 +1420,7 @@
   <a href="#about" class="mobile-link" data-ar="من نحن" data-en="About">من نحن</a>
   <a href="#services" class="mobile-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
   <a href="#portfolio" class="mobile-link" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
+  <a href="#real-works" class="mobile-link" data-ar="على الطبيعة" data-en="On Site">على الطبيعة</a>
   <a href="#blog" class="mobile-link" data-ar="المدونة" data-en="Blog">المدونة</a>
   <a href="#contact" class="mobile-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
   <a href="https://wa.me/966560594312" class="btn btn-whatsapp" style="margin-top:10px;width:280px;justify-content:center;" target="_blank">
@@ -2039,13 +1784,28 @@
   </div>
 </section>
 
+<section id="real-works">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag" style="background:rgba(21,128,61,0.15); border-color:rgba(21,128,61,0.3); color:var(--green-light);">📸 <span data-ar="من أرض الواقع" data-en="Real Works">من أرض الواقع</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="أعمالنا على" data-en="Our On-Site">أعمالنا على</span> <span class="highlight" data-ar="الطبيعة" data-en="Works">الطبيعة</span></h2>
+      <p class="section-sub" data-ar="استعرض لقطات حية من مواقع العمل لمشاريع الدهانات والنقاشة التي نفذناها مؤخراً." data-en="Browse live shots from our recent painting and decoration work sites.">استعرض لقطات حية من مواقع العمل لمشاريع الدهانات والنقاشة التي نفذناها مؤخراً.</p>
+    </div>
+  </div>
+
+  <div class="rw-slider-container">
+    <div class="rw-slider-track" id="realWorksTrack"></div>
+  </div>
+</section>
+
 <section id="testimonials">
   <div class="container">
     <div class="section-header center">
       <div class="section-tag">⭐ <span data-ar="آراء العملاء" data-en="Client Reviews">آراء العملاء</span></div>
       <div class="divider"></div>
       <h2 class="section-heading"><span data-ar="ماذا يقول" data-en="What Our">ماذا يقول</span> <span class="highlight" data-ar="عملاؤنا" data-en="Clients Say">عملاؤنا</span></h2>
-      <p class="section-sub" data-ar="آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في مكة المكرمة والمملكة العربية السعودية" data-en="Real reviews from our valued clients who trusted our services in Makkah and Saudi Arabia">آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في كافة مناطق المملكة العربية السعودية</p>
+      <p class="section-sub" data-ar="آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في كافة مناطق المملكة العربية السعودية" data-en="Real reviews from our valued clients who trusted our services in all regions of Saudi Arabia">آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في كافة مناطق المملكة العربية السعودية</p>
     </div>
     <div class="testimonials-grid">
       <div class="testi-card reveal reveal-delay-1">
@@ -2160,7 +1920,7 @@
               <h3 data-ar="كيف تختار ألوان الدهان المناسبة لغرفة معيشتك؟" data-en="How to Choose the Right Paint Colors for Your Living Room?">كيف تختار ألوان الدهان المناسبة لغرفة معيشتك؟</h3>
               <p data-ar="دليل شامل لاختيار ألوان الدهان التي تتناسب مع الإضاءة الطبيعية والمصطنعة وتعكس شخصيتك وذوقك الرفيع في الديكور." data-en="A comprehensive guide to choosing paint colors that match lighting and reflect your taste.">دليل شامل لاختيار ألوان الدهان التي تتناسب مع الإضاءة الطبيعية والمصطنعة وتعكس شخصيتك وذوقك الرفيع في الديكور.</p>
               <div class="blog-footer">
-                <span class="blog-date">15 يناير 2026-2027</span>
+                <span class="blog-date">15 يناير 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2175,7 +1935,7 @@
               <h3 data-ar="أسرار دهانات الفنادق الفاخرة: ما لا تعرفه" data-en="Secrets of Luxury Hotel Painting">أسرار دهانات الفنادق الفاخرة: ما لا تعرفه</h3>
               <p data-ar="اكتشف الأسرار خلف الدهانات الفاخرة في الفنادق العالمية الكبرى وكيف تختلف عن الدهانات العادية من حيث المواد والتقنيات." data-en="Discover the secrets behind luxury hotel painting and how they differ from regular paints.">اكتشف الأسرار خلف الدهانات الفاخرة في الفنادق العالمية الكبرى وكيف تختلف عن الدهانات العادية من حيث المواد والتقنيات.</p>
               <div class="blog-footer">
-                <span class="blog-date">22 فبراير 2026-2027</span>
+                <span class="blog-date">22 فبراير 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2190,7 +1950,7 @@
               <h3 data-ar="أفضل أنواع الدهانات الصديقة للبيئة في السعودية" data-en="Best Eco-Friendly Paints in Saudi Arabia">أفضل أنواع الدهانات الصديقة للبيئة في السعودية</h3>
               <p data-ar="مراجعة شاملة لأفضل ماركات الدهانات البيئية المتاحة في السوق السعودي مع مقارنة الأسعار والجودة." data-en="A comprehensive review of the best eco-friendly paint brands in the Saudi market.">مراجعة شاملة لأفضل ماركات الدهانات البيئية المتاحة في السوق السعودي مع مقارنة الأسعار والجودة.</p>
               <div class="blog-footer">
-                <span class="blog-date">10 مارس 2026-2027</span>
+                <span class="blog-date">10 مارس 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2205,7 +1965,7 @@
               <h3 data-ar="كيف تحافظ على دهانات منزلك لأطول فترة ممكنة؟" data-en="How to Maintain Your Home Paint?">كيف تحافظ على دهانات منزلك لأطول فترة ممكنة؟</h3>
               <p data-ar="نصائح ذهبية من خبراء الدهانات للحفاظ على جمال ألوان منزلك وإطالة عمر الدهان مع تقليل تكاليف الصيانة." data-en="Golden tips from paint experts to preserve your home's colors and extend paint life.">نصائح ذهبية من خبراء الدهانات للحفاظ على جمال ألوان منزلك وإطالة عمر الدهان مع تقليل تكاليف الصيانة.</p>
               <div class="blog-footer">
-                <span class="blog-date">5 أبريل 2026-2027</span>
+                <span class="blog-date">5 أبريل 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2217,10 +1977,10 @@
             </div>
             <div class="blog-body">
               <div class="blog-cat" data-ar="تصاميم الديكور" data-en="Interior Design">تصاميم الديكور</div>
-              <h3 data-ar="أحدث صيحات الديكور الداخلي لعام 2026-2027" data-en="Latest Interior Decor Trends 2026-2027">أحدث صيحات الديكور الداخلي لعام 2026-2027</h3>
+              <h3 data-ar="أحدث صيحات الديكور الداخلي لعام 2026" data-en="Latest Interior Decor Trends 2026">أحدث صيحات الديكور الداخلي لعام 2026</h3>
               <p data-ar="استعراض لأبرز اتجاهات الديكور الداخلي وألوان الدهانات الأكثر طلباً في السوق السعودي والخليجي لهذا العام." data-en="Overview of the top interior design trends and most popular paint colors in the Saudi market this year.">استعراض لأبرز اتجاهات الديكور الداخلي وألوان الدهانات الأكثر طلباً في السوق السعودي والخليجي لهذا العام.</p>
               <div class="blog-footer">
-                <span class="blog-date">18 أبريل 2026-2027</span>
+                <span class="blog-date">18 أبريل 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2232,10 +1992,10 @@
             </div>
             <div class="blog-body">
               <div class="blog-cat" data-ar="مشاريع مكة المكرمة" data-en="Makkah Projects">مشاريع مكة المكرمة</div>
-              <h3 data-ar="أبرز مشاريع الدهانات في مكة المكرمة 2024-2026-2027" data-en="Top Painting Projects in Makkah 2024-2026-2027">أبرز مشاريع الدهانات في السعودية 2024-2026-2027</h3>
+              <h3 data-ar="أبرز مشاريع الدهانات في مكة المكرمة 2024-2026" data-en="Top Painting Projects in Makkah 2024-2026">أبرز مشاريع الدهانات في السعودية 2024-2026</h3>
               <p data-ar="جولة حصرية على أضخم مشاريع الدهانات والتشطيب التي نفذناها في قلب مكة المكرمة خلال العامين الماضيين." data-en="An exclusive tour of the largest painting and finishing projects we executed in Makkah over the past two years.">جولة حصرية على أضخم مشاريع الدهانات والتشطيب التي نفذناها في أنحاء المملكة خلال العامين الماضيين.</p>
               <div class="blog-footer">
-                <span class="blog-date">2 مايو 2026-2027</span>
+                <span class="blog-date">2 مايو 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2250,7 +2010,7 @@
               <h3 data-ar="تقنية الستوكو الإيطالي: الرفاهية على جدران منزلك" data-en="Italian Stucco: Luxury on Your Home Walls">تقنية الستوكو الإيطالي: الرفاهية على جدران منزلك</h3>
               <p data-ar="كل ما تحتاج معرفته عن تقنية الستوكو الإيطالي الفاخر، طريقة التطبيق، مميزاتها، وكيف تمنح جدرانك مظهراً راقياً لا مثيل له." data-en="Everything you need to know about Italian stucco technique, application methods, advantages, and how it gives your walls a luxurious look.">كل ما تحتاج معرفته عن تقنية الستوكو الإيطالي الفاخر، طريقة التطبيق، مميزاتها، وكيف تمنح جدرانك مظهراً راقياً لا مثيل له.</p>
               <div class="blog-footer">
-                <span class="blog-date">14 مايو 2026-2027</span>
+                <span class="blog-date">14 مايو 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2265,7 +2025,7 @@
               <h3 data-ar="10 أخطاء شائعة في الدهانات يرتكبها معظم الناس" data-en="10 Common Painting Mistakes Most People Make">10 أخطاء شائعة في الدهانات يرتكبها معظم الناس</h3>
               <p data-ar="تعرف على الأخطاء الأكثر شيوعاً في أعمال الدهانات المنزلية وكيف تتجنبها للحصول على نتيجة احترافية تدوم طويلاً." data-en="Learn about the most common DIY painting mistakes and how to avoid them for professional, long-lasting results.">تعرف على الأخطاء الأكثر شيوعاً في أعمال الدهانات المنزلية وكيف تتجنبها للحصول على نتيجة احترافية تدوم طويلاً.</p>
               <div class="blog-footer">
-                <span class="blog-date">1 يونيو 2026-2027</span>
+                <span class="blog-date">1 يونيو 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2280,7 +2040,7 @@
               <h3 data-ar="علم الألوان: كيف تؤثر ألوان الجدران على مزاجك؟" data-en="Color Science: How Wall Colors Affect Your Mood?">علم الألوان: كيف تؤثر ألوان الجدران على مزاجك؟</h3>
               <p data-ar="دراسة معمّقة في علم نفس الألوان وتأثير دهانات الجدران على الحالة المزاجية والإنتاجية وجودة النوم في المنزل." data-en="An in-depth study of color psychology and how wall paint colors affect mood, productivity, and sleep quality.">دراسة معمّقة في علم نفس الألوان وتأثير دهانات الجدران على الحالة المزاجية والإنتاجية وجودة النوم في المنزل.</p>
               <div class="blog-footer">
-                <span class="blog-date">20 يونيو 2026-2027</span>
+                <span class="blog-date">20 يونيو 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2295,7 +2055,7 @@
               <h3 data-ar="قصة نجاح: كيف حوّلنا فندقاً كاملاً في 60 يوماً؟" data-en="Success Story: How We Transformed a Full Hotel in 60 Days?">قصة نجاح: كيف حوّلنا فندقاً كاملاً في 60 يوماً؟</h3>
               <p data-ar="تفاصيل مذهلة عن كيفية تنفيذ مشروع دهانات لفندق من 500 غرفة في مكة المكرمة خلال 60 يوماً فقط دون إيقاف العمل." data-en="Amazing details about executing a painting project for a 500-room hotel in Makkah in just 60 days without stopping operations.">تفاصيل مذهلة عن كيفية تنفيذ مشروع دهانات لفندق من 500 غرفة خلال 60 يوماً فقط دون إيقاف العمل.</p>
               <div class="blog-footer">
-                <span class="blog-date">10 يوليو 2026-2027</span>
+                <span class="blog-date">10 يوليو 2026</span>
                 <a href="#" class="blog-read" onclick="openPage(this);return false;"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
               </div>
             </div>
@@ -2380,7 +2140,7 @@
       <div class="footer-credit">
         <span data-ar="برمجة بكل حب <span class='heart-pulse'>❤️</span> المهندس محمد حماد" data-en="Developed with love <span class='heart-pulse'>❤️</span> by Engineer Mohammed Hammad">برمجة بكل حب <span class="heart-pulse">❤️</span> المهندس محمد حماد</span>
         <br />
-        <span style="font-size:0.75rem;opacity:0.5;" data-ar="© 2026-2027 جميع الحقوق محفوظة" data-en="© 2026-2027 All Rights Reserved">© 2026-2027 جميع الحقوق محفوظة</span>
+        <span style="font-size:0.75rem;opacity:0.5;" data-ar="© 2026 جميع الحقوق محفوظة" data-en="© 2026 All Rights Reserved">© 2026 جميع الحقوق محفوظة</span>
       </div>
       <div class="footer-social">
         <a href="https://www.facebook.com/en.mohamed.nasr" class="social-btn sb-fb" target="_blank" aria-label="Facebook">f</a>
@@ -2452,7 +2212,6 @@
     function update(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // easeOutQuart
       const eased = 1 - Math.pow(1 - progress, 4);
       const current = Math.round(eased * target * 10) / 10;
       el.textContent = (isDecimal ? current.toFixed(1) : Math.round(current)) + suffix;
@@ -2486,12 +2245,10 @@
     document.documentElement.setAttribute('dir', isEn ? 'ltr' : 'rtl');
     langToggle.textContent = isEn ? 'AR' : 'EN';
 
-    // Swap text content
     document.querySelectorAll('[data-ar]').forEach(el => {
       el.textContent = isEn ? el.getAttribute('data-en') : el.getAttribute('data-ar');
     });
 
-    // Swap placeholders
     document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
       el.setAttribute('placeholder', isEn ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-ar-placeholder'));
     });
@@ -2523,6 +2280,23 @@
     });
   });
 
+  // ==================== REAL WORKS SLIDER INJECTION ====================
+  // حقن الصور وجعلها تتحرك باستمرار
+  const rwTrack = document.getElementById('realWorksTrack');
+  if(rwTrack) {
+    let itemsHTML = '';
+    // استدعاء 15 صورة من جيتهاب بناءً على مجلد photos
+    for(let i = 1; i <= 15; i++) {
+      itemsHTML += `
+        <div class="rw-item">
+          <img src="https://raw.githubusercontent.com/mohamednasr5/colorksa/main/photos/${i}.jpeg" alt="عمل دهانات على الطبيعة ${i}" loading="lazy" onerror="this.style.display='none'">
+        </div>
+      `;
+    }
+    // نقوم بنسخ المحتوى مرتين بداخل التراك لضمان الحركة اللانهائية (Infinite Scroll)
+    rwTrack.innerHTML = itemsHTML + itemsHTML;
+  }
+
   // ==================== INNER PAGES SYSTEM ====================
 
   function openPage(link) {
@@ -2552,7 +2326,6 @@
     document.body.style.overflow = '';
   }
 
-  // ESC key closes overlay
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closePage(); });
 
   // ==================== BLOG SLIDER ====================
@@ -2795,7 +2568,7 @@
   // ---- BLOG PAGES DATA ----
   const blogData = {
     'كيف تختار ألوان الدهان المناسبة لغرفة معيشتك؟': {
-      icon: '🎨', cat: 'نصائح الدهانات', date: '15 يناير 2026-2027',
+      icon: '🎨', cat: 'نصائح الدهانات', date: '15 يناير 2026',
       gradient: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
       heroDesc: 'دليل شامل لاختيار ألوان الدهان التي تتناسب مع الإضاءة الطبيعية والمصطنعة وتعكس ذوقك في الديكور.',
       content: [
@@ -2806,7 +2579,7 @@
       ]
     },
     'أسرار دهانات الفنادق الفاخرة: ما لا تعرفه': {
-      icon: '🏨', cat: 'دهانات الفنادق', date: '22 فبراير 2026-2027',
+      icon: '🏨', cat: 'دهانات الفنادق', date: '22 فبراير 2026',
       gradient: 'linear-gradient(135deg, #fef3c7, #fde68a)',
       heroDesc: 'اكتشف الأسرار خلف الدهانات الفاخرة في الفنادق العالمية الكبرى وكيف تختلف عن الدهانات العادية.',
       content: [
@@ -2817,7 +2590,7 @@
       ]
     },
     'أفضل أنواع الدهانات الصديقة للبيئة في السعودية': {
-      icon: '🌿', cat: 'الدهانات الصديقة للبيئة', date: '10 مارس 2026-2027',
+      icon: '🌿', cat: 'الدهانات الصديقة للبيئة', date: '10 مارس 2026',
       gradient: 'linear-gradient(135deg, #d1fae5, #a7f3d0)',
       heroDesc: 'مراجعة شاملة لأفضل ماركات الدهانات البيئية في السوق السعودي ومقارنة بين الأسعار والجودة والمتانة.',
       content: [
@@ -2828,7 +2601,7 @@
       ]
     },
     'كيف تحافظ على دهانات منزلك لأطول فترة ممكنة؟': {
-      icon: '🔧', cat: 'الصيانة والعناية', date: '5 أبريل 2026-2027',
+      icon: '🔧', cat: 'الصيانة والعناية', date: '5 أبريل 2026',
       gradient: 'linear-gradient(135deg, #fce7f3, #fbcfe8)',
       heroDesc: 'نصائح ذهبية من خبراء الدهانات للحفاظ على جمال ألوان منزلك وإطالة عمر الدهان مع تقليل تكاليف الصيانة.',
       content: [
@@ -2840,7 +2613,6 @@
     }
   };
 
-  // ---- PAGE BUILDERS ----
   function buildServicePage(card) {
     const title = card.querySelector('h3').getAttribute('data-ar') || card.querySelector('h3').textContent.trim();
     const data = serviceData[title] || {};
@@ -2931,7 +2703,6 @@
     const statsHTML = stats ? stats.map(s => `
       <div class="ic-stat"><div class="ic-stat-num">${s.num}</div><div class="ic-stat-label">${s.label}</div></div>`).join('') : '';
 
-    // Real images per project
     const projectImages = {
       'Fairmont Makkah Clock Royal Tower': [
         { url: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80', caption: 'واجهة الفندق الخارجية' },
