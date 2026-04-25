@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دهانات ونقاشة السعودية | متخصصون في أعمال الدهانات الاحترافية - مكة المكرمة</title>
+  <meta name="description" content="دهانات ونقاشة السعودية - متخصصون في أعمال الدهانات والنقاشة الاحترافية بإدارة المهندس محمد حسن. خبرة واسعة في دهانات الفنادق والمشاريع الكبرى في مكة المكرمة والمملكة العربية السعودية." />
+  <meta name="keywords" content="دهانات في السعودية, معلم دهانات مكة, نقاش في السعودية, دهانات مكة, دهانات احترافية, نقاشة مكة المكرمة, دهانات فنادق مكة, شركة دهانات السعودية" />
+  <meta name="author" content="المهندس محمد حسن" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="دهانات ونقاشة السعودية | متخصصون في الدهانات الاحترافية" />
+  <meta property="og:description" content="خبرة واسعة في أعمال الدهانات والنقاشة الاحترافية للفنادق والمشاريع الكبرى في مكة المكرمة والمملكة العربية السعودية." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:site_name" content="دهانات ونقاشة السعودية" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================
+       CSS VARIABLES & RESET
+    ========================================= */
+    :root {
+      --blue: #1a3a6b;
+      --blue-light: #2557a7;
+      --blue-glow: #3b82f6;
+      --orange: #f97316;
+      --orange-dark: #ea580c;
+      --yellow: #fbbf24;
+      --yellow-light: #fde68a;
+      --green: #15803d;
+      --green-light: #22c55e;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --dark: #0d1b2e;
+      --dark-2: #162035;
+      --text-muted: #94a3b8;
+      --text-body: #475569;
+      --border: rgba(255,255,255,0.08);
+      --shadow-card: 0 8px 32px rgba(13,27,46,0.18);
+      --shadow-hover: 0 20px 60px rgba(13,27,46,0.28);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background: var(--off-white);
+      color: var(--dark);
+      direction: rtl;
+      overflow-x: hidden;
+    }
+    body.ltr { direction: ltr; font-family: 'Tajawal', sans-serif; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* =========================================
+       SCROLLBAR
+    ========================================= */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+    /* =========================================
+       ANIMATIONS
+    ========================================= */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(-40px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+    @keyframes pulse-ring {
+      0%   { transform: scale(0.9); opacity: 0.7; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes starPop {
+      0%,100% { transform: scale(1); }
+      50%      { transform: scale(1.3); }
+    }
+    @keyframes heartbeat {
+      0%,100% { transform: scale(1); }
+      14%      { transform: scale(1.3); }
+      28%      { transform: scale(1); }
+      42%      { transform: scale(1.25); }
+      70%      { transform: scale(1); }
+    }
+    .heart-pulse {
+      display: inline-block;
+      animation: heartbeat 1.4s ease-in-out infinite;
+      color: #ef4444;
+    }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .fade-in { animation: fadeUp 0.7s ease both; }
+    .fade-in-delay-1 { animation-delay: 0.1s; }
+    .fade-in-delay-2 { animation-delay: 0.2s; }
+    .fade-in-delay-3 { animation-delay: 0.3s; }
+    .fade-in-delay-4 { animation-delay: 0.4s; }
+
+    /* =========================================
+       UTILS
+    ========================================= */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(251,191,36,0.12));
+      border: 1px solid rgba(249,115,22,0.25);
+      color: var(--orange);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 50px;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .section-heading {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section-heading span { color: var(--orange); }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-body);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 52px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+
+    /* Divider */
+    .divider {
+      width: 60px; height: 4px;
+      background: linear-gradient(90deg, var(--orange), var(--yellow));
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .center .divider { margin: 0 auto 20px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.12);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .btn:hover::before { opacity: 1; }
+    .btn:active { transform: scale(0.96); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(249,115,22,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(249,115,22,0.48);
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(37,211,102,0.48);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+      backdrop-filter: blur(10px);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateY(-3px);
+    }
+    .btn-blue {
+      background: linear-gradient(135deg, var(--blue-light), var(--blue));
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(37,87,167,0.35);
+    }
+    .btn-blue:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(37,87,167,0.48);
+    }
+
+    /* =========================================
+       NAVBAR
+    ========================================= */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      transition: var(--transition);
+      padding: 0;
+    }
+    #navbar.scrolled {
+      background: rgba(13,27,46,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(249,115,22,0.15);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 20px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .nav-logo-icon {
+      width: 46px; height: 46px;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 16px rgba(249,115,22,0.4);
+    }
+    .nav-logo-text { color: var(--white); }
+    .nav-logo-text strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+    .nav-logo-text span {
+      font-size: 0.7rem;
+      color: var(--yellow-light);
+      font-weight: 400;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: var(--white);
+      background: rgba(249,115,22,0.15);
+    }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .lang-toggle {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .lang-toggle:hover { background: rgba(255,255,255,0.2); }
+    .nav-cta {
+      display: none;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(13,27,46,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: var(--white);
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 12px 40px;
+      border-radius: 12px;
+      transition: var(--transition);
+      width: 280px;
+      text-align: center;
+    }
+    .mobile-nav a:hover { background: rgba(249,115,22,0.2); color: var(--orange); }
+    .mobile-nav-close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: var(--white);
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(145deg, var(--dark) 0%, var(--dark-2) 40%, #1e3a5f 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 100px 0 60px;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(249,115,22,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37,87,167,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(21,128,61,0.06) 0%, transparent 60%);
+    }
+    .hero-grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(21,128,61,0.2), rgba(34,197,94,0.1));
+      border: 1px solid rgba(34,197,94,0.3);
+      color: var(--green-light);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 16px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+      animation: fadeIn 0.6s ease both;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green-light);
+      animation: pulse-ring 1.5s infinite;
+      box-shadow: 0 0 0 0 rgba(34,197,94,0.4);
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 10px;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--yellow-light);
+      font-weight: 700;
+      margin-bottom: 16px;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 480px;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s ease 0.4s both;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 48px;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+    .stat-divider { width: 1px; background: rgba(255,255,255,0.1); }
+
+    /* Hero Visual */
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: fadeIn 0.8s ease 0.3s both;
+    }
+    .hero-circle-wrap {
+      position: relative;
+      width: 360px; height: 360px;
+    }
+    .hero-circle-outer {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px dashed rgba(249,115,22,0.25);
+      animation: spin-slow 20s linear infinite;
+    }
+    .hero-circle-inner {
+      position: absolute;
+      inset: 30px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(37,87,167,0.3), rgba(13,27,46,0.8));
+      border: 1px solid rgba(249,115,22,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+    .hero-icon-main {
+      font-size: 6rem;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 30px rgba(249,115,22,0.5));
+    }
+    .hero-orbit {
+      position: absolute;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      border: 2px solid;
+      backdrop-filter: blur(10px);
+    }
+    .orbit-1 { top: 10px; right: 30px; background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.4); animation: float 3s ease-in-out infinite; }
+    .orbit-2 { bottom: 20px; right: 10px; background: rgba(37,87,167,0.2); border-color: rgba(37,87,167,0.4); animation: float 3.5s ease-in-out infinite 0.5s; }
+    .orbit-3 { bottom: 40px; left: 10px; background: rgba(21,128,61,0.2); border-color: rgba(21,128,61,0.4); animation: float 4s ease-in-out infinite 1s; }
+    .orbit-4 { top: 30px; left: 30px; background: rgba(251,191,36,0.15); border-color: rgba(251,191,36,0.4); animation: float 3.2s ease-in-out infinite 1.5s; }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+    #about {
+      padding: 100px 0;
+      background: var(--white);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-card {
+      background: linear-gradient(145deg, var(--dark), var(--dark-2));
+      border-radius: 24px;
+      padding: 50px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .about-img-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green-light));
+    }
+    .about-img-icon { font-size: 5rem; margin-bottom: 16px; animation: float 5s ease-in-out infinite; }
+    .about-img-card h3 { color: var(--white); font-size: 1.3rem; font-weight: 800; }
+    .about-img-card p { color: var(--text-muted); font-size: 0.85rem; margin-top: 6px; }
+    .about-badge-float {
+      position: absolute;
+      bottom: -20px;
+      left: 30px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: var(--white);
+      padding: 14px 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(249,115,22,0.4);
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-badge-float strong { font-size: 1.4rem; font-weight: 900; display: block; }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .feature-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--off-white);
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .feature-chip:hover { border-color: var(--orange); background: rgba(249,115,22,0.04); transform: translateY(-2px); }
+    .feature-chip .icon { font-size: 1.2rem; }
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+    #services {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--off-white), #f0f4ff);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--yellow));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: right;
+    }
+    .service-card:hover::before { transform: scaleX(1); transform-origin: left; }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(249,115,22,0.2);
+    }
+    .service-icon {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .si-orange { background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(251,191,36,0.1)); }
+    .si-blue   { background: linear-gradient(135deg, rgba(37,87,167,0.15), rgba(59,130,246,0.1)); }
+    .si-green  { background: linear-gradient(135deg, rgba(21,128,61,0.15), rgba(34,197,94,0.1)); }
+    .service-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 10px; }
+    .service-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.7; }
+    .service-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--orange);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 16px;
+      transition: gap 0.3s;
+    }
+    .service-more:hover { gap: 10px; }
+
+    /* =========================================
+       PORTFOLIO
+    ========================================= */
+    #portfolio {
+      padding: 100px 0;
+      background: var(--dark);
+    }
+    #portfolio .section-heading { color: var(--white); }
+    #portfolio .section-sub { color: rgba(255,255,255,0.6); }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    .portfolio-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .portfolio-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .portfolio-img {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,27,46,0.9) 0%, transparent 60%);
+    }
+    .pi-1 { background: linear-gradient(135deg, #1a237e, #283593); }
+    .pi-2 { background: linear-gradient(135deg, #37474f, #546e7a); }
+    .pi-3 { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+    .pi-4 { background: linear-gradient(135deg, #4a148c, #6a1b9a); }
+    .portfolio-emoji {
+      position: relative; z-index: 2;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(249,115,22,0.4));
+    }
+    .portfolio-body { padding: 24px; }
+    .portfolio-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--orange);
+      background: rgba(249,115,22,0.1);
+      border: 1px solid rgba(249,115,22,0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .portfolio-body h3 { color: var(--white); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+    .portfolio-body p { color: rgba(255,255,255,0.5); font-size: 0.83rem; line-height: 1.6; }
+    .portfolio-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .portfolio-stars { color: var(--yellow); font-size: 0.9rem; }
+    .portfolio-link {
+      font-size: 0.8rem;
+      color: var(--orange);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.3s;
+    }
+    .portfolio-link:hover { gap: 8px; }
+
+    /* =========================================
+       TESTIMONIALS
+    ========================================= */
+    #testimonials {
+      padding: 100px 0;
+      background: linear-gradient(180deg, var(--off-white), var(--white));
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 26px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      transition: var(--transition);
+    }
+    .testi-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .testi-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 5rem;
+      color: rgba(249,115,22,0.1);
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+    .testi-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+    .testi-stars span {
+      color: var(--yellow);
+      font-size: 1rem;
+      animation: starPop 0.5s ease both;
+    }
+    .testi-text { font-size: 0.92rem; color: var(--text-body); line-height: 1.75; margin-bottom: 20px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .av-1 { background: linear-gradient(135deg, var(--blue-light), var(--blue)); }
+    .av-2 { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); }
+    .av-3 { background: linear-gradient(135deg, var(--green), var(--green-light)); }
+    .av-4 { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+    .av-5 { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+    .av-6 { background: linear-gradient(135deg, #0891b2, #0e7490); }
+    .testi-name { font-weight: 800; font-size: 0.95rem; }
+    .testi-role { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* =========================================
+       BLOG
+    ========================================= */
+    #blog {
+      padding: 100px 0;
+      background: linear-gradient(180deg, #f0f4ff, var(--off-white));
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .blog-thumb {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      position: relative;
+    }
+    .bt-1 { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+    .bt-2 { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+    .bt-3 { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+    .bt-4 { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
+    .blog-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .blog-cat {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .blog-body h3 { font-size: 1rem; font-weight: 800; margin-bottom: 10px; line-height: 1.4; }
+    .blog-body p { font-size: 0.85rem; color: var(--text-body); line-height: 1.7; flex: 1; }
+    .blog-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .blog-date { font-size: 0.75rem; color: var(--text-muted); }
+    .blog-read {
+      font-size: 0.82rem;
+      color: var(--orange);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.3s;
+    }
+    .blog-read:hover { gap: 8px; }
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+    #contact {
+      padding: 100px 0;
+      background: linear-gradient(145deg, var(--dark), var(--dark-2));
+      position: relative;
+      overflow: hidden;
+    }
+    #contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(249,115,22,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(37,87,167,0.1) 0%, transparent 50%);
+    }
+    #contact .section-heading { color: var(--white); }
+    #contact .section-sub { color: rgba(255,255,255,0.6); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      position: relative;
+      z-index: 2;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 18px; }
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 22px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .contact-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(249,115,22,0.3); transform: translateX(-6px); }
+    .contact-icon {
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .ci-wa { background: linear-gradient(135deg, #25d366, #128c7e); }
+    .ci-ph { background: linear-gradient(135deg, var(--blue-light), var(--blue)); }
+    .ci-loc { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); }
+    .ci-fb { background: linear-gradient(135deg, #1877f2, #166fe5); }
+    .contact-card-text strong { display: block; color: var(--white); font-size: 0.95rem; font-weight: 700; }
+    .contact-card-text span { color: rgba(255,255,255,0.5); font-size: 0.83rem; }
+    .contact-form-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .contact-form-wrap h3 { color: var(--white); font-size: 1.2rem; font-weight: 800; margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white);
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      outline: none;
+      direction: inherit;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: rgba(249,115,22,0.5);
+      background: rgba(255,255,255,0.09);
+    }
+    .form-group textarea { resize: none; height: 110px; }
+    .form-submit {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,115,22,0.4); }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    footer {
+      background: #060d18;
+      padding: 40px 0 30px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 12px; }
+    .footer-logo-icon {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    .footer-logo-text strong { color: var(--white); font-size: 0.95rem; display: block; }
+    .footer-logo-text span { color: rgba(255,255,255,0.4); font-size: 0.72rem; }
+    .footer-credit {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.83rem;
+      text-align: center;
+    }
+    .footer-credit a { color: var(--orange); font-weight: 700; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn {
+      width: 38px; height: 38px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .sb-fb { background: #1877f2; color: var(--white); }
+    .sb-wa { background: #25d366; color: var(--white); }
+    .social-btn:hover { transform: translateY(-3px) scale(1.1); }
+
+    /* =========================================
+       STICKY MOBILE BAR
+    ========================================= */
+    .sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(13,27,46,0.96);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      z-index: 900;
+      padding: 10px 20px;
+      gap: 12px;
+    }
+    .sticky-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      transition: var(--transition);
+    }
+    .sticky-wa { background: linear-gradient(135deg, #25d366, #128c7e); }
+    .sticky-call { background: linear-gradient(135deg, var(--blue-light), var(--blue)); }
+    .sticky-bar a:active { transform: scale(0.95); }
+
+    /* =========================================
+       SCROLL TO TOP
+    ========================================= */
+    #scrollTop {
+      position: fixed;
+      bottom: 90px;
+      left: 20px;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color: var(--white);
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+      transition: var(--transition);
+      z-index: 800;
+    }
+    #scrollTop:hover { transform: translateY(-3px); }
+    #scrollTop.visible { display: flex; }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-desc { margin: 0 auto 36px; }
+      .about-grid { grid-template-columns: 1fr; gap: 50px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; align-items: center; }
+      .sticky-bar { display: flex; }
+      body { padding-bottom: 70px; }
+      #scrollTop { bottom: 90px; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      .stat-divider { display: none; }
+      .about-features { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================
+       INTERSECTION OBSERVER ANIMATIONS
+    ========================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* =========================================
+       ENGLISH MODE
+    ========================================= */
+    body.ltr #hero .hero-badge::before { animation: pulse-ring 1.5s infinite; }
+    body.ltr .contact-card:hover { transform: translateX(6px); }
+
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">🎨</div>
+        <div class="nav-logo-text">
+          <strong data-ar="دهانات ونقاشة" data-en="Saudi Paint Pro">دهانات ونقاشة</strong>
+          <span data-ar="السعودية" data-en="Professional Painting">السعودية</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+        <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+        <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+        <li><a href="#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a></li>
+        <li><a href="#blog" data-ar="المدونة" data-en="Blog">المدونة</a></li>
+        <li><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+  <a href="#hero" class="mobile-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+  <a href="#about" class="mobile-link" data-ar="من نحن" data-en="About">من نحن</a>
+  <a href="#services" class="mobile-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+  <a href="#portfolio" class="mobile-link" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
+  <a href="#blog" class="mobile-link" data-ar="المدونة" data-en="Blog">المدونة</a>
+  <a href="#contact" class="mobile-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+  <a href="https://wa.me/966560594312" class="btn btn-whatsapp" style="margin-top:10px;width:280px;justify-content:center;" target="_blank">
+    <span>💬</span> <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+  </a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span data-ar="✓ متخصصون في الدهانات الاحترافية منذ 15+ عاماً" data-en="✓ Professional Painting Specialists 15+ Years">✓ متخصصون في الدهانات الاحترافية منذ 15+ عاماً</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="highlight" data-ar="دهانات ونقاشة" data-en="Premium Painting &">دهانات ونقاشة</span><br>
+          <span data-ar="السعودية" data-en="Decoration Saudi">السعودية</span>
+        </h1>
+        <p class="hero-subtitle" data-ar="متخصصون في أعمال الدهانات والنقاشة الاحترافية" data-en="Specialists in Professional Painting & Decoration Works">متخصصون في أعمال الدهانات والنقاشة الاحترافية</p>
+        <p class="hero-desc" data-ar="بإدارة المهندس محمد حسن — نقدم أرقى خدمات الدهانات للفنادق الفاخرة، المجمعات السكنية، والمشاريع التجارية الكبرى في مكة المكرمة وجميع أنحاء المملكة العربية السعودية." data-en="Under the management of Engineer Mohammed Hassan — we deliver premium painting services for luxury hotels, residential complexes, and major commercial projects across Makkah and all of Saudi Arabia.">
+          بإدارة المهندس محمد حسن — نقدم أرقى خدمات الدهانات للفنادق الفاخرة، المجمعات السكنية، والمشاريع التجارية الكبرى في مكة المكرمة وجميع أنحاء المملكة العربية السعودية.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/966560594312" class="btn btn-whatsapp" target="_blank">
+            <span>💬</span> <span data-ar="تواصل واتساب" data-en="WhatsApp Us">تواصل واتساب</span>
+          </a>
+          <a href="tel:0560594312" class="btn btn-outline">
+            <span>📞</span> <span data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">15+</div>
+            <div class="stat-label" data-ar="سنة خبرة" data-en="Years Experience">سنة خبرة</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label" data-ar="رضا العملاء" data-en="Client Satisfaction">رضا العملاء</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">50+</div>
+            <div class="stat-label" data-ar="فندق ومجمع" data-en="Hotels & Complexes">فندق ومجمع</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-circle-wrap">
+          <div class="hero-circle-outer"></div>
+          <div class="hero-circle-inner">
+            <div class="hero-icon-main">🎨</div>
+          </div>
+          <div class="hero-orbit orbit-1">🏗️</div>
+          <div class="hero-orbit orbit-2">✨</div>
+          <div class="hero-orbit orbit-3">🖌️</div>
+          <div class="hero-orbit orbit-4">⭐</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-img-card">
+          <div class="about-img-icon">🏆</div>
+          <h3 data-ar="الريادة في الجودة" data-en="Leading in Quality">الريادة في الجودة</h3>
+          <p data-ar="إدارة مهندس محمد حسن" data-en="Managed by Engineer Mohammed Hassan">إدارة مهندس محمد حسن</p>
+        </div>
+        <div class="about-badge-float">
+          <span>🎖️</span>
+          <div>
+            <strong>15+</strong>
+            <span data-ar="سنة في السوق" data-en="Years in Market">سنة في السوق</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right" style="padding-top: 20px;">
+        <div class="section-tag">🏠 <span data-ar="من نحن" data-en="About Us">من نحن</span></div>
+        <div class="divider"></div>
+        <h2 class="section-heading">
+          <span data-ar="خبرة تمتد لأكثر من" data-en="Experience spanning more than">خبرة تمتد لأكثر من</span>
+          <span> <span class="highlight" data-ar="خمسة عشر عاماً" data-en="Fifteen Years">خمسة عشر عاماً</span></span>
+        </h2>
+        <p class="section-sub" style="margin-bottom:24px;" data-ar="شركة دهانات ونقاشة السعودية هي الرائدة في مجال الدهانات الاحترافية في المملكة العربية السعودية. تأسست بقيادة المهندس محمد حسن الذي يتمتع بخبرة واسعة في خدمة أكبر الفنادق العالمية والمشاريع الضخمة في مكة المكرمة والمملكة." data-en="Saudi Paint & Decoration Company is the leader in professional painting in Saudi Arabia. Founded under the leadership of Engineer Mohammed Hassan, who has extensive experience serving the world's largest hotels and mega-projects in Makkah and the Kingdom.">
+          شركة دهانات ونقاشة السعودية هي الرائدة في مجال الدهانات الاحترافية في المملكة العربية السعودية. تأسست بقيادة المهندس محمد حسن الذي يتمتع بخبرة واسعة في خدمة أكبر الفنادق العالمية والمشاريع الضخمة في مكة المكرمة والمملكة.
+        </p>
+        <div class="about-features">
+          <div class="feature-chip"><span class="icon">🎯</span> <span data-ar="دقة في التنفيذ" data-en="Precision Execution">دقة في التنفيذ</span></div>
+          <div class="feature-chip"><span class="icon">⏱️</span> <span data-ar="التسليم في الوقت" data-en="On-time Delivery">التسليم في الوقت</span></div>
+          <div class="feature-chip"><span class="icon">🌟</span> <span data-ar="جودة عالمية" data-en="World-class Quality">جودة عالمية</span></div>
+          <div class="feature-chip"><span class="icon">💰</span> <span data-ar="أسعار تنافسية" data-en="Competitive Pricing">أسعار تنافسية</span></div>
+          <div class="feature-chip"><span class="icon">🔒</span> <span data-ar="ضمان الأعمال" data-en="Work Guarantee">ضمان الأعمال</span></div>
+          <div class="feature-chip"><span class="icon">🤝</span> <span data-ar="فريق محترف" data-en="Professional Team">فريق محترف</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">🛠️ <span data-ar="خدماتنا" data-en="Our Services">خدماتنا</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="ما نقدمه لكم من" data-en="What We Offer">ما نقدمه لكم من</span> <span class="highlight" data-ar="خدمات" data-en="Services">خدمات</span></h2>
+      <p class="section-sub" data-ar="نقدم مجموعة شاملة من خدمات الدهانات والنقاشة الاحترافية لجميع أنواع المنشآت" data-en="We offer a comprehensive range of professional painting and decoration services for all types of facilities">نقدم مجموعة شاملة من خدمات الدهانات والنقاشة الاحترافية لجميع أنواع المنشآت</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon si-orange">🏨</div>
+        <h3 data-ar="دهانات الفنادق الفاخرة" data-en="Luxury Hotel Painting">دهانات الفنادق الفاخرة</h3>
+        <p data-ar="تخصص في دهانات الفنادق الفاخرة والمنتجعات الكبرى بأعلى معايير الجودة الدولية وباستخدام أفضل المواد العالمية." data-en="Specializing in luxury hotel and resort painting with the highest international quality standards and the best global materials.">تخصص في دهانات الفنادق الفاخرة والمنتجعات الكبرى بأعلى معايير الجودة الدولية وباستخدام أفضل المواد العالمية.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon si-blue">🏢</div>
+        <h3 data-ar="دهانات المباني التجارية" data-en="Commercial Building Painting">دهانات المباني التجارية</h3>
+        <p data-ar="خدمات متكاملة لدهانات المراكز التجارية، المكاتب، والمنشآت التجارية بتصاميم عصرية تعكس هوية المشروع." data-en="Integrated services for painting commercial centers, offices, and business facilities with modern designs reflecting the project identity.">خدمات متكاملة لدهانات المراكز التجارية، المكاتب، والمنشآت التجارية بتصاميم عصرية تعكس هوية المشروع.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon si-green">🏠</div>
+        <h3 data-ar="دهانات المنازل والفلل" data-en="Residential & Villa Painting">دهانات المنازل والفلل</h3>
+        <p data-ar="نحول منزلك إلى تحفة فنية بألوان راقية وتقنيات تطبيق احترافية تضمن النتيجة المثالية لسنوات طويلة." data-en="We transform your home into a masterpiece with refined colors and professional application techniques ensuring perfect results for years.">نحول منزلك إلى تحفة فنية بألوان راقية وتقنيات تطبيق احترافية تضمن النتيجة المثالية لسنوات طويلة.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon si-orange">🎨</div>
+        <h3 data-ar="الديكورات والزخارف" data-en="Decorative & Ornamental Work">الديكورات والزخارف</h3>
+        <p data-ar="أعمال الديكور المتخصصة تشمل الرسوم الجدارية، التأثيرات الخاصة، والزخارف الإسلامية الأصيلة بأيدي فنانين مهرة." data-en="Specialized decorative works including murals, special effects, and authentic Islamic ornaments by skilled artists.">أعمال الديكور المتخصصة تشمل الرسوم الجدارية، التأثيرات الخاصة، والزخارف الإسلامية الأصيلة بأيدي فنانين مهرة.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon si-blue">🔧</div>
+        <h3 data-ar="الصيانة والترميم" data-en="Maintenance & Restoration">الصيانة والترميم</h3>
+        <p data-ar="خدمات صيانة دورية وترميم للمباني القديمة مع الحفاظ على طابعها المعماري الأصيل وإعادة بريقها من جديد." data-en="Periodic maintenance and restoration services for old buildings, preserving their architectural character and restoring their shine.">خدمات صيانة دورية وترميم للمباني القديمة مع الحفاظ على طابعها المعماري الأصيل وإعادة بريقها من جديد.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon si-green">📋</div>
+        <h3 data-ar="الاستشارات والتصميم" data-en="Consulting & Design">الاستشارات والتصميم</h3>
+        <p data-ar="نقدم استشارات متخصصة في اختيار الألوان والتصاميم مع محاكاة ثلاثية الأبعاد قبل البدء في التنفيذ الفعلي." data-en="We provide specialized consultations for color and design selection with 3D simulation before actual implementation.">نقدم استشارات متخصصة في اختيار الألوان والتصاميم مع محاكاة ثلاثية الأبعاد قبل البدء في التنفيذ الفعلي.</p>
+        <a href="#" class="service-more"><span data-ar="اعرف أكثر" data-en="Learn More">اعرف أكثر</span> ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PORTFOLIO ==================== -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag" style="background:rgba(249,115,22,0.15); border-color:rgba(249,115,22,0.3);">🏗️ <span data-ar="أعمالنا" data-en="Our Portfolio">أعمالنا</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="مشاريعنا" data-en="Our">مشاريعنا</span> <span class="highlight" data-ar="المميزة" data-en="Featured Projects">المميزة</span></h2>
+      <p class="section-sub" data-ar="من أبرز المشاريع التي نفخر بتنفيذها في قلب مكة المكرمة والمملكة العربية السعودية" data-en="Among the most prominent projects we are proud to have executed in the heart of Makkah and Saudi Arabia">من أبرز المشاريع التي نفخر بتنفيذها في قلب مكة المكرمة والمملكة العربية السعودية</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal reveal-delay-1">
+        <div class="portfolio-img pi-1">
+          <span class="portfolio-emoji">🕰️</span>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag" data-ar="فندق خمس نجوم" data-en="Five Star Hotel">فندق خمس نجوم</span>
+          <h3 data-ar="Fairmont Makkah Clock Royal Tower" data-en="Fairmont Makkah Clock Royal Tower">Fairmont Makkah Clock Royal Tower</h3>
+          <p data-ar="أعمال دهانات متكاملة لأحد أشهر فنادق العالم في قلب مكة المكرمة بمعايير الجودة الدولية الأعلى." data-en="Complete painting works for one of the world's most famous hotels in the heart of Makkah with the highest international quality standards.">أعمال دهانات متكاملة لأحد أشهر فنادق العالم في قلب مكة المكرمة بمعايير الجودة الدولية الأعلى.</p>
+          <div class="portfolio-footer">
+            <div class="portfolio-stars">★★★★★</div>
+            <a href="#" class="portfolio-link"><span data-ar="عرض المشروع" data-en="View Project">عرض المشروع</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-2">
+        <div class="portfolio-img pi-2">
+          <span class="portfolio-emoji">🏨</span>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag" data-ar="فندق دولي" data-en="International Hotel">فندق دولي</span>
+          <h3 data-ar="Swissotel Makkah" data-en="Swissotel Makkah">Swissotel Makkah</h3>
+          <p data-ar="تنفيذ أعمال نقاشة احترافية لكامل أروقة وغرف الفندق الشهير بأعلى مستويات الدقة والإتقان." data-en="Professional painting works for all corridors and rooms of the famous hotel with the highest levels of precision and mastery.">تنفيذ أعمال نقاشة احترافية لكامل أروقة وغرف الفندق الشهير بأعلى مستويات الدقة والإتقان.</p>
+          <div class="portfolio-footer">
+            <div class="portfolio-stars">★★★★★</div>
+            <a href="#" class="portfolio-link"><span data-ar="عرض المشروع" data-en="View Project">عرض المشروع</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-3">
+        <div class="portfolio-img pi-3">
+          <span class="portfolio-emoji">🌿</span>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag" data-ar="فندق فاخر" data-en="Luxury Hotel">فندق فاخر</span>
+          <h3 data-ar="Hilton Suites Makkah" data-en="Hilton Suites Makkah">Hilton Suites Makkah</h3>
+          <p data-ar="مشروع دهانات شامل يشمل كافة الطوابق والمرافق بتنسيق لوني احترافي يتناسب مع الهوية البصرية للفندق." data-en="Comprehensive painting project covering all floors and facilities with professional color coordination matching the hotel's visual identity.">مشروع دهانات شامل يشمل كافة الطوابق والمرافق بتنسيق لوني احترافي يتناسب مع الهوية البصرية للفندق.</p>
+          <div class="portfolio-footer">
+            <div class="portfolio-stars">★★★★★</div>
+            <a href="#" class="portfolio-link"><span data-ar="عرض المشروع" data-en="View Project">عرض المشروع</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal reveal-delay-4">
+        <div class="portfolio-img pi-4">
+          <span class="portfolio-emoji">💧</span>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-tag" data-ar="برج فندقي" data-en="Hotel Tower">برج فندقي</span>
+          <h3 data-ar="Pullman ZamZam Makkah" data-en="Pullman ZamZam Makkah">Pullman ZamZam Makkah</h3>
+          <p data-ar="إنجاز متميز في دهانات أحد أرقى فنادق المجموعة الفرنسية بمكة المكرمة ضمن فريق عمل محترف ومتكامل." data-en="Distinguished achievement in painting one of the finest French group hotels in Makkah with a professional and integrated work team.">إنجاز متميز في دهانات أحد أرقى فنادق المجموعة الفرنسية بمكة المكرمة ضمن فريق عمل محترف ومتكامل.</p>
+          <div class="portfolio-footer">
+            <div class="portfolio-stars">★★★★★</div>
+            <a href="#" class="portfolio-link"><span data-ar="عرض المشروع" data-en="View Project">عرض المشروع</span> ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">⭐ <span data-ar="آراء العملاء" data-en="Client Reviews">آراء العملاء</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="ماذا يقول" data-en="What Our">ماذا يقول</span> <span class="highlight" data-ar="عملاؤنا" data-en="Clients Say">عملاؤنا</span></h2>
+      <p class="section-sub" data-ar="آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في مكة المكرمة والمملكة العربية السعودية" data-en="Real reviews from our valued clients who trusted our services in Makkah and Saudi Arabia">آراء حقيقية من عملائنا الكرام الذين وثقوا بخدماتنا في مكة المكرمة والمملكة العربية السعودية</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="عمل احترافي من الدرجة الأولى، الفريق متعاون ومتقن للعمل. النتيجة فاقت توقعاتي تماماً وأنصح الجميع بالتعامل معهم." data-en="First-class professional work, the team is cooperative and skilled. The result exceeded my expectations entirely and I recommend everyone to work with them.">عمل احترافي من الدرجة الأولى، الفريق متعاون ومتقن للعمل. النتيجة فاقت توقعاتي تماماً وأنصح الجميع بالتعامل معهم.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-1">خ</div>
+          <div>
+            <div class="testi-name" data-ar="خالد بن سعد العتيبي" data-en="Khalid bin Saad Al-Otaibi">خالد بن سعد العتيبي</div>
+            <div class="testi-role" data-ar="مالك فيلا، مكة المكرمة" data-en="Villa Owner, Makkah">مالك فيلا، مكة المكرمة</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="تعاملت معهم في دهانات مجمعنا التجاري وكانت التجربة رائعة. الالتزام بالمواعيد والجودة العالية جعلتهم خيارنا الأول دائماً." data-en="I worked with them on painting our commercial complex and the experience was wonderful. Commitment to deadlines and high quality made them always our first choice.">تعاملت معهم في دهانات مجمعنا التجاري وكانت التجربة رائعة. الالتزام بالمواعيد والجودة العالية جعلتهم خيارنا الأول دائماً.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-2">م</div>
+          <div>
+            <div class="testi-name" data-ar="محمد سليمان الغامدي" data-en="Mohammed Suleiman Al-Ghamdi">محمد سليمان الغامدي</div>
+            <div class="testi-role" data-ar="مدير مجمع تجاري، جدة" data-en="Commercial Complex Manager, Jeddah">مدير مجمع تجاري، جدة</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="المهندس محمد حسن وفريقه محترفون حقيقيون، اهتموا بأدق التفاصيل وقدموا عملاً يستحق كل الإشادة. سأتعامل معهم مرة أخرى بلا تردد." data-en="Engineer Mohammed Hassan and his team are true professionals, they paid attention to the finest details and delivered work worthy of all praise. I will work with them again without hesitation.">المهندس محمد حسن وفريقه محترفون حقيقيون، اهتموا بأدق التفاصيل وقدموا عملاً يستحق كل الإشادة. سأتعامل معهم مرة أخرى بلا تردد.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-3">ع</div>
+          <div>
+            <div class="testi-name" data-ar="عبدالرحمن الزهراني" data-en="Abdulrahman Al-Zahrani">عبدالرحمن الزهراني</div>
+            <div class="testi-role" data-ar="مقاول بناء، الطائف" data-en="Construction Contractor, Taif">مقاول بناء، الطائف</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="قاموا بدهان فندقنا باحترافية منقطعة النظير، استخدموا مواد عالية الجودة وأظهروا مستوى استثنائياً من الإتقان في كل تفصيلة." data-en="They painted our hotel with unparalleled professionalism, used high-quality materials and showed an exceptional level of mastery in every detail.">قاموا بدهان فندقنا باحترافية منقطعة النظير، استخدموا مواد عالية الجودة وأظهروا مستوى استثنائياً من الإتقان في كل تفصيلة.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-4">ف</div>
+          <div>
+            <div class="testi-name" data-ar="فهد عبدالله القحطاني" data-en="Fahad Abdullah Al-Qahtani">فهد عبدالله القحطاني</div>
+            <div class="testi-role" data-ar="مدير فندق، مكة المكرمة" data-en="Hotel Manager, Makkah">مدير فندق، مكة المكرمة</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="تجربة مميزة ومحترفة من البداية حتى النهاية. الأسعار معقولة جداً مقارنة بالجودة المقدمة. فريق عمل منظم ونظيف." data-en="A distinguished and professional experience from start to finish. Very reasonable prices compared to the quality provided. Organized and clean work team.">تجربة مميزة ومحترفة من البداية حتى النهاية. الأسعار معقولة جداً مقارنة بالجودة المقدمة. فريق عمل منظم ونظيف.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-5">س</div>
+          <div>
+            <div class="testi-name" data-ar="سعود مرزوق الدوسري" data-en="Saud Marzouq Al-Dosari">سعود مرزوق الدوسري</div>
+            <div class="testi-role" data-ar="رجل أعمال، الرياض" data-en="Businessman, Riyadh">رجل أعمال، الرياض</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testi-text" data-ar="أفضل شركة دهانات في مكة المكرمة بلا منازع. خبرتهم في الفنادق الكبرى تنعكس على كل عمل صغير وكبير يقومون به. ممتازون." data-en="The best painting company in Makkah without question. Their experience in major hotels is reflected in every small and large work they do. Excellent.">أفضل شركة دهانات في مكة المكرمة بلا منازع. خبرتهم في الفنادق الكبرى تنعكس على كل عمل صغير وكبير يقومون به. ممتازون.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av-6">ن</div>
+          <div>
+            <div class="testi-name" data-ar="نايف صالح الحربي" data-en="Nayef Saleh Al-Harbi">نايف صالح الحربي</div>
+            <div class="testi-role" data-ar="مهندس مدني، مكة المكرمة" data-en="Civil Engineer, Makkah">مهندس مدني، مكة المكرمة</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BLOG ==================== -->
+<section id="blog">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-tag">📝 <span data-ar="المدونة" data-en="Blog">المدونة</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="مقالات ونصائح" data-en="Articles &">مقالات ونصائح</span> <span class="highlight" data-ar="متخصصة" data-en="Expert Tips">متخصصة</span></h2>
+      <p class="section-sub" data-ar="تعرف على أحدث نصائح الدهانات والديكور من خبراء دهانات ونقاشة السعودية" data-en="Discover the latest painting and decoration tips from Saudi Paint & Decoration experts">تعرف على أحدث نصائح الدهانات والديكور من خبراء دهانات ونقاشة السعودية</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card reveal reveal-delay-1">
+        <div class="blog-thumb bt-1">🎨</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-ar="نصائح الدهانات" data-en="Painting Tips">نصائح الدهانات</div>
+          <h3 data-ar="كيف تختار ألوان الدهان المناسبة لغرفة معيشتك؟" data-en="How to Choose the Right Paint Colors for Your Living Room?">كيف تختار ألوان الدهان المناسبة لغرفة معيشتك؟</h3>
+          <p data-ar="دليل شامل لاختيار ألوان الدهان التي تتناسب مع الإضاءة الطبيعية والمصطنعة وتعكس شخصيتك وذوقك الرفيع في الديكور." data-en="A comprehensive guide to choosing paint colors that match natural and artificial lighting and reflect your personality and refined taste in decoration.">دليل شامل لاختيار ألوان الدهان التي تتناسب مع الإضاءة الطبيعية والمصطنعة وتعكس شخصيتك وذوقك الرفيع في الديكور.</p>
+          <div class="blog-footer">
+            <span class="blog-date">15 يناير 2025</span>
+            <a href="#" class="blog-read"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-2">
+        <div class="blog-thumb bt-2">🏨</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-ar="دهانات الفنادق" data-en="Hotel Painting">دهانات الفنادق</div>
+          <h3 data-ar="أسرار دهانات الفنادق الفاخرة: ما لا تعرفه" data-en="Secrets of Luxury Hotel Painting: What You Don't Know">أسرار دهانات الفنادق الفاخرة: ما لا تعرفه</h3>
+          <p data-ar="اكتشف الأسرار خلف الدهانات الفاخرة في الفنادق العالمية الكبرى وكيف تختلف عن الدهانات العادية من حيث المواد والتقنيات." data-en="Discover the secrets behind luxury painting in major international hotels and how they differ from regular painting in terms of materials and techniques.">اكتشف الأسرار خلف الدهانات الفاخرة في الفنادق العالمية الكبرى وكيف تختلف عن الدهانات العادية من حيث المواد والتقنيات.</p>
+          <div class="blog-footer">
+            <span class="blog-date">22 فبراير 2025</span>
+            <a href="#" class="blog-read"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-3">
+        <div class="blog-thumb bt-3">🌿</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-ar="الدهانات الصديقة للبيئة" data-en="Eco-friendly Paint">الدهانات الصديقة للبيئة</div>
+          <h3 data-ar="أفضل أنواع الدهانات الصديقة للبيئة في السعودية" data-en="Best Eco-Friendly Paint Types in Saudi Arabia">أفضل أنواع الدهانات الصديقة للبيئة في السعودية</h3>
+          <p data-ar="مراجعة شاملة لأفضل ماركات الدهانات البيئية المتاحة في السوق السعودي ومقارنة شاملة بين الأسعار والجودة والمتانة." data-en="A comprehensive review of the best eco-friendly paint brands available in the Saudi market and a full comparison of prices, quality, and durability.">مراجعة شاملة لأفضل ماركات الدهانات البيئية المتاحة في السوق السعودي ومقارنة شاملة بين الأسعار والجودة والمتانة.</p>
+          <div class="blog-footer">
+            <span class="blog-date">10 مارس 2025</span>
+            <a href="#" class="blog-read"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card reveal reveal-delay-4">
+        <div class="blog-thumb bt-4">🔧</div>
+        <div class="blog-body">
+          <div class="blog-cat" data-ar="الصيانة والعناية" data-en="Maintenance & Care">الصيانة والعناية</div>
+          <h3 data-ar="كيف تحافظ على دهانات منزلك لأطول فترة ممكنة؟" data-en="How to Maintain Your Home Paint for as Long as Possible?">كيف تحافظ على دهانات منزلك لأطول فترة ممكنة؟</h3>
+          <p data-ar="نصائح ذهبية من خبراء الدهانات للحفاظ على جمال ألوان منزلك وإطالة عمر الدهان مع تقليل تكاليف الصيانة الدورية." data-en="Golden tips from paint experts to preserve the beauty of your home's colors and extend paint life while reducing periodic maintenance costs.">نصائح ذهبية من خبراء الدهانات للحفاظ على جمال ألوان منزلك وإطالة عمر الدهان مع تقليل تكاليف الصيانة الدورية.</p>
+          <div class="blog-footer">
+            <span class="blog-date">5 أبريل 2025</span>
+            <a href="#" class="blog-read"><span data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</span> ←</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header center" style="position:relative;z-index:2;">
+      <div class="section-tag" style="background:rgba(249,115,22,0.15); border-color:rgba(249,115,22,0.3);">📞 <span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span></div>
+      <div class="divider"></div>
+      <h2 class="section-heading"><span data-ar="نحن هنا" data-en="We Are">نحن هنا</span> <span class="highlight" data-ar="لخدمتكم" data-en="Here For You">لخدمتكم</span></h2>
+      <p class="section-sub" data-ar="تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لمشروعك" data-en="Contact us now for a free consultation and a customized price quote for your project">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لمشروعك</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <a href="https://wa.me/966560594312" class="contact-card" target="_blank">
+          <div class="contact-icon ci-wa">💬</div>
+          <div class="contact-card-text">
+            <strong data-ar="واتساب" data-en="WhatsApp">واتساب</strong>
+            <span>+966 560 594 312</span>
+          </div>
+        </a>
+        <a href="tel:0560594312" class="contact-card">
+          <div class="contact-icon ci-ph">📞</div>
+          <div class="contact-card-text">
+            <strong data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</strong>
+            <span>0560594312</span>
+          </div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-icon ci-loc">📍</div>
+          <div class="contact-card-text">
+            <strong data-ar="موقعنا" data-en="Our Location">موقعنا</strong>
+            <span data-ar="مكة المكرمة، المملكة العربية السعودية" data-en="Makkah, Saudi Arabia">مكة المكرمة، المملكة العربية السعودية</span>
+          </div>
+        </div>
+        <div class="contact-card" style="cursor:default;">
+          <div class="contact-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706);">⏰</div>
+          <div class="contact-card-text">
+            <strong data-ar="ساعات العمل" data-en="Working Hours">ساعات العمل</strong>
+            <span data-ar="السبت – الخميس: 7ص – 10م" data-en="Sat – Thu: 7AM – 10PM">السبت – الخميس: 7ص – 10م</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal-right">
+        <h3 data-ar="أرسل لنا رسالة" data-en="Send Us a Message">أرسل لنا رسالة</h3>
+        <div class="form-group">
+          <input type="text" placeholder="اسمك الكريم" data-ar-placeholder="اسمك الكريم" data-en-placeholder="Your Full Name" />
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="رقم الجوال" data-ar-placeholder="رقم الجوال" data-en-placeholder="Phone Number" />
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="نوع الخدمة المطلوبة" data-ar-placeholder="نوع الخدمة المطلوبة" data-en-placeholder="Service Type Needed" />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="رسالتك أو استفسارك..." data-ar-placeholder="رسالتك أو استفسارك..." data-en-placeholder="Your message or inquiry..."></textarea>
+        </div>
+        <button class="form-submit" onclick="sendWhatsApp()" data-ar="إرسال عبر واتساب 💬" data-en="Send via WhatsApp 💬">إرسال عبر واتساب 💬</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">🎨</div>
+        <div class="footer-logo-text">
+          <strong data-ar="دهانات ونقاشة السعودية" data-en="Saudi Paint Pro">دهانات ونقاشة السعودية</strong>
+          <span data-ar="إدارة مهندس محمد حسن" data-en="Managed by Eng. Mohammed Hassan">إدارة مهندس محمد حسن</span>
+        </div>
+      </div>
+      <div class="footer-credit">
+        <span data-ar="برمجة بكل حب <span class='heart-pulse'>❤️</span> المهندس محمد حماد" data-en="Developed with love <span class='heart-pulse'>❤️</span> by Engineer Mohammed Hammad">برمجة بكل حب <span class="heart-pulse">❤️</span> المهندس محمد حماد</span>
+        <br />
+        <span style="font-size:0.75rem;opacity:0.5;" data-ar="© 2025 جميع الحقوق محفوظة" data-en="© 2025 All Rights Reserved">© 2025 جميع الحقوق محفوظة</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/en.mohamed.nasr" class="social-btn sb-fb" target="_blank" aria-label="Facebook">f</a>
+        <a href="https://wa.me/966547518986" class="social-btn sb-wa" target="_blank" aria-label="WhatsApp المبرمج">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar">
+  <a href="https://wa.me/966560594312" class="sticky-wa" target="_blank">
+    <span>💬</span> <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+  </a>
+  <a href="tel:0560594312" class="sticky-call">
+    <span>📞</span> <span data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</span>
+  </a>
+</div>
+
+<!-- Scroll to Top -->
+<button id="scrollTop" aria-label="Back to top">↑</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+  // ---- NAVBAR SCROLL ----
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ---- HAMBURGER ----
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
+  mobileNavClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('open'));
+  });
+
+  // ---- SCROLL TOP ----
+  document.getElementById('scrollTop').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ---- INTERSECTION OBSERVER ----
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ---- LANGUAGE TOGGLE ----
+  let isEn = false;
+  const langToggle = document.getElementById('langToggle');
+  langToggle.addEventListener('click', () => {
+    isEn = !isEn;
+    document.body.classList.toggle('ltr', isEn);
+    document.documentElement.setAttribute('lang', isEn ? 'en' : 'ar');
+    document.documentElement.setAttribute('dir', isEn ? 'ltr' : 'rtl');
+    langToggle.textContent = isEn ? 'AR' : 'EN';
+
+    // Swap text content
+    document.querySelectorAll('[data-ar]').forEach(el => {
+      el.textContent = isEn ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+    });
+
+    // Swap placeholders
+    document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
+      el.setAttribute('placeholder', isEn ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-ar-placeholder'));
+    });
+  });
+
+  // ---- WHATSAPP FORM ----
+  function sendWhatsApp() {
+    const inputs = document.querySelectorAll('.contact-form-wrap input, .contact-form-wrap textarea');
+    const name = inputs[0].value || (isEn ? 'Not provided' : 'غير محدد');
+    const phone = inputs[1].value || (isEn ? 'Not provided' : 'غير محدد');
+    const service = inputs[2].value || (isEn ? 'Not provided' : 'غير محددة');
+    const msg = inputs[3].value || '';
+
+    const text = isEn
+      ? `Hello, I would like to request a quote\nName: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${msg}`
+      : `السلام عليكم، أود الاستفسار عن خدماتكم\nالاسم: ${name}\nرقم الجوال: ${phone}\nنوع الخدمة: ${service}\nالرسالة: ${msg}`;
+
+    window.open('https://wa.me/966560594312?text=' + encodeURIComponent(text), '_blank');
+  }
+
+  // ---- SMOOTH SCROLL FOR ALL ANCHOR LINKS ----
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
